@@ -9,7 +9,7 @@
         :root {
             --bg: #09090b;
             --card: #18181b;
-            --accent: #ff5a5f; /* Cor coral do seu currículo */
+            --accent: #ff5a5f;
             --text: #fafafa;
             --text-dim: #a1a1aa;
         }
@@ -24,7 +24,7 @@
 
         .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
 
-        /* Header Estilizado */
+
         header { margin-bottom: 80px; margin-top: 40px; }
         .badge {
             background: rgba(255, 90, 95, 0.1);
@@ -39,7 +39,7 @@
         h1 { font-size: 3.5rem; margin: 15px 0; font-weight: 800; letter-spacing: -2px; }
         .intro-p { font-size: 1.2rem; color: var(--text-dim); max-width: 600px; }
 
-        /* Grade de Projetos/Habilidades */
+
         .section-title { font-size: 0.9rem; color: var(--accent); font-weight: 800; text-transform: uppercase; margin-bottom: 20px; display: block; }
         
         .bento-grid {
@@ -61,7 +61,7 @@
         .card h3 { margin-top: 0; color: var(--text); }
         .card p { color: var(--text-dim); font-size: 0.95rem; }
 
-        /* Footer e Links */
+
         .links { display: flex; gap: 20px; margin-top: 30px; }
         .btn-primary { 
             background: var(--accent); 
@@ -86,6 +86,33 @@
             .bento-grid { grid-template-columns: 1fr; }
         }
     </style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .card-featured {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 600px) {
+            .card-featured {
+                grid-column: span 1;
+            }
+        }
 </head>
 <body>
 
@@ -128,6 +155,21 @@
             <h3>Heineken Concept & Smartwatch UI</h3>
             <p>Estudos de caso focados em animação promocional e prototipagem funcional de interfaces vestíveis.</p>
         </div>
+        <span class="section-title">Showcase 3D</span>
+<div class="card card-featured">
+    <h3>Heineken Concept | Motion Design & Prototipagem</h3>
+    <p>Estudo de caso explorando ritmo visual, materiais e iluminação no Blender para animação promocional.</p>
+    
+    <div class="video-container">
+        <!-- COLOQUE O LINK DO SEU VÍDEO ABAIXO NO SRC -->
+        <iframe 
+            src="https://www.youtube.com/embed/SEU_ID_AQUI" 
+            title="Heineken Concept - Pedro Cunha" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
     </main>
 
     <footer style="margin-top: 100px; border-top: 1px solid #27272a; padding-top: 20px; color: var(--text-dim); font-size: 0.8rem;">
