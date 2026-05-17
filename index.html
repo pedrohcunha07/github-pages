@@ -24,8 +24,8 @@
 
         .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
 
-
-        header { margin-bottom: 80px; margin-top: 40px; }
+        header { margin-bottom: 60px; margin-top: 40px; }
+        
         .badge {
             background: rgba(255, 90, 95, 0.1);
             color: var(--accent);
@@ -36,17 +36,16 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+
         h1 { font-size: 3.5rem; margin: 15px 0; font-weight: 800; letter-spacing: -2px; }
         .intro-p { font-size: 1.2rem; color: var(--text-dim); max-width: 600px; }
 
-
-        .section-title { font-size: 0.9rem; color: var(--accent); font-weight: 800; text-transform: uppercase; margin-bottom: 20px; display: block; }
+        .section-title { font-size: 0.9rem; color: var(--accent); font-weight: 800; text-transform: uppercase; margin-bottom: 20px; display: block; margin-top: 40px; }
         
         .bento-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
-            margin-bottom: 50px;
         }
 
         .card {
@@ -62,67 +61,42 @@
         .card p { color: var(--text-dim); font-size: 0.95rem; }
 
 
-        .links { display: flex; gap: 20px; margin-top: 30px; }
-        .btn-primary { 
-            background: var(--accent); 
-            color: white; 
-            padding: 12px 25px; 
-            border-radius: 8px; 
-            text-decoration: none; 
-            font-weight: 600;
-            transition: opacity 0.2s;
-        }
-        .btn-secondary { 
-            border: 1px solid #27272a; 
-            color: var(--text); 
-            padding: 12px 25px; 
-            border-radius: 8px; 
-            text-decoration: none; 
-        }
-        .btn-primary:hover { opacity: 0.9; }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
-            .bento-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+        .card-featured { grid-column: span 2; }
+        
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* Proporção 16:9 */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             border-radius: 12px;
             margin-top: 20px;
+            background: #000;
         }
 
         .video-container iframe {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             border: none;
         }
 
-        .card-featured {
-            grid-column: span 2;
-        }
+        .links { display: flex; gap: 20px; margin-top: 30px; }
+        .btn-primary { background: var(--accent); color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        .btn-secondary { border: 1px solid #27272a; color: var(--text); padding: 12px 25px; border-radius: 8px; text-decoration: none; }
 
         @media (max-width: 600px) {
-            .card-featured {
-                grid-column: span 1;
-            }
+            h1 { font-size: 2.5rem; }
+            .bento-grid { grid-template-columns: 1fr; }
+            .card-featured { grid-column: span 1; }
         }
+    </style>
 </head>
 <body>
 
 <div class="container">
     <header>
-        <span class="badge">Disponível para Projetos</span>
+        <span class="badge">Portfólio Ativo</span>
         <h1>Pedro Henrique Silva da Cunha</h1>
-        <p class="intro-p">
-            Integrando <strong>Design 3D</strong> e <strong>Desenvolvimento Python</strong> para criar interfaces de alta performance e experiências centradas no usuário.
-        </p>
+        <p class="intro-p">Integrando <strong>Design 3D</strong> e <strong>Desenvolvimento Python</strong> para criar experiências centradas no usuário.</p>
         <div class="links">
             <a href="https://www.linkedin.com/in/pedroh-scunha/" class="btn-primary">LinkedIn</a>
             <a href="https://github.com/pedrohcunha07" class="btn-secondary">GitHub</a>
@@ -130,49 +104,30 @@
     </header>
 
     <main>
+        <span class="section-title">Showcase Video</span>
+        <div class="card card-featured">
+            <h3>Heineken Concept | Motion Design</h3>
+            <p>Estudo de caso em Blender explorando ritmo visual e renderização realista para publicidade digital.</p>
+            <div class="video-container">
+                
+                <iframe src="https://www.youtube.com/embed/yARfQ39oxdI?si=M9j58OO3AH1jXPUy" allowfullscreen></iframe>
+            </div>
+        </div>
+
         <span class="section-title">Especialidades</span>
         <div class="bento-grid">
             <div class="card">
-                <h3>Desenvolvimento & Lógica</h3>
-                <p>Focado em Python e algoritmos. Atualmente cursando ADS na UniCEUB e CS50P na Harvard University.</p>
+                <h3>Desenvolvimento</h3>
+                <p>Python e Lógica de Programação. Estudante de ADS focado em soluções robustas de Back-end.</p>
             </div>
             <div class="card">
-                <h3>Design & Visual 3D</h3>
-                <p>Domínio de Blender, Photoshop e Illustrator. Especialista em mockups realistas e assets 3D (Projeto Natur).</p>
-            </div>
-            <div class="card">
-                <h3>Inglês Avançado (C1)</h3>
-                <p>Certificado <strong>TOEIC Gold</strong> com score 865/990. Comunicação fluente para ambientes globais.</p>
-            </div>
-            <div class="card">
-                <h3>UX & Atendimento</h3>
-                <p>Experiência direta com o público, convertendo necessidades reais em soluções de interface intuitivas.</p>
+                <h3>Visual 3D & UX</h3>
+                <p>Mockups realistas no Blender e Design de Interface (UI) focado na dor do usuário.</p>
             </div>
         </div>
-
-        <span class="section-title">Destaques Profissionais</span>
-        <div class="card" style="margin-bottom: 20px;">
-            <h3>Heineken Concept & Smartwatch UI</h3>
-            <p>Estudos de caso focados em animação promocional e prototipagem funcional de interfaces vestíveis.</p>
-        </div>
-        <span class="section-title">Showcase 3D</span>
-<div class="card card-featured">
-    <h3>Heineken Concept | Motion Design & Prototipagem</h3>
-    <p>Estudo de caso explorando ritmo visual, materiais e iluminação no Blender para animação promocional.</p>
-    
-    <div class="video-container">
-        <!-- COLOQUE O LINK DO SEU VÍDEO ABAIXO NO SRC -->
-        <iframe 
-            src="https://www.youtube.com/embed/SEU_ID_AQUI" 
-            title="Heineken Concept - Pedro Cunha" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
-    </div>
-</div>
     </main>
 
-    <footer style="margin-top: 100px; border-top: 1px solid #27272a; padding-top: 20px; color: var(--text-dim); font-size: 0.8rem;">
+    <footer style="margin-top: 80px; border-top: 1px solid #27272a; padding-top: 20px; color: var(--text-dim); font-size: 0.8rem; text-align: center;">
         Brasília, DF • 2026
     </footer>
 </div>
